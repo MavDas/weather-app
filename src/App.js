@@ -35,19 +35,23 @@ class App extends Component {
       currentTemp= this.state.data.list[0].main.temp;
     }
     return (
-      <div className="container">
+      <div className="card">
         <h1>Weather!</h1>
-        <form onSubmit={this.fetchData}>
-          <label> I want to know the weather for <input placeholder={"City, Country"}
-                                                        type="text"
-                                                        value={this.state.location} 
-                                                        onChange={this.changeLocation} />
-          </label>
-        </form>
-        <p>
-          <span>{ currentTemp } </span>
-          <span>&deg;C</span> 
-        </p>
+        <hr />
+        <br />
+        <div className="card-body">
+          <form onSubmit={this.fetchData}>
+            <label> I want to know the weather for <input placeholder={"City, Country"}
+                                                          type="text"
+                                                          value={this.state.location} 
+                                                          onChange={this.changeLocation} />
+            </label>
+          </form>
+          <p>
+            <span>{ currentTemp } </span>
+            <span>&deg;C</span> 
+          </p>
+        </div>
       </div>
 
     );

@@ -5,5 +5,5 @@ import App from './App';
 import xhr from 'xhr';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, root);
 registerServiceWorker();
